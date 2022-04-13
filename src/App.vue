@@ -1,11 +1,22 @@
 <template>
+  <div class="app">
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
-  <div></div>
   <router-view/>
+  </div>
 </template>
+
+
+<script>
+export default {
+  name: 'App',
+  comments: {},
+
+}
+</script>
+
 
 <style>
 #app {
