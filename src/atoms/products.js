@@ -1,0 +1,55 @@
+import { atom } from "recoil";
+
+export const productsState = atom({
+   key: 'productsState',
+   default: [
+      {
+         image: "Bella-T01-90.jpg",
+         name: "Bella-T01-90",
+         article: "Bella-T01-90",
+         price: 42000,
+         available: 10,
+         color: "Белый глянец"
+      },
+      {
+         image: "Natali-T01-90.jpg",
+         name: "Natali-T01-90",
+         article: "Natali-T01-90",
+         price: 40000,
+         available: 0,
+         color: "Белый глянец"
+      },
+      {
+         image: "Sofia-T01-90.jpg",
+         name: "Sofia-T01-90",
+         article: "Sofia-T01-90",
+         price: 38000,
+         available: 3,
+         color: "Белый глянец"
+      },
+      {
+         image: "Bella-T01-100.jpg",
+         name: "Bella-T01-100",
+         article: "Bella-T01-100",
+         price: 52000,
+         available: 7,
+         color: "Красный глянец"
+      },
+      {
+         image: "Natali-T01-100.jpg",
+         name: "Natali-T01-100",
+         article: "Natali-T01-100",
+         price: 50000,
+         available: 5,
+         color: "Красный глянец"
+      },
+      {
+         image: "Sofia-T01-100.jpg",
+         name: "Sofia-T01-100",
+         article: "Sofia-T01-100",
+         price: 48000,
+         available: 9,
+         color: "Красный глянец"
+      }
+   ],
+});

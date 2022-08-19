@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+/*    font-size: 12px; */
+   font-family: 'Roboto',
+   sans-serif;
+}
+
+#root {
+   display: flex;
+   justify-content: center;
+}
+
+body {
+   background-color: rgb(48, 52, 56);
+   min-height: 100vh;
+}
+
+.App {
+   width: 900px;
+   background-color: aliceblue;
+   min-height: 100vh;
+}
+
+
+/* .post {
+   flex-basis: 32%;
+   text-align: center;
+   padding: 15px;
+   border: 2px solid rgb(93, 176, 112);
+   border-radius: 5px;
+   margin: 5px 5px 5px 5px;
+   align-items: center;
+}
+.catalog {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+*/
+/* .cart {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+*/
+
+/* @media screen and (max-width: 1200px) {
+   .App {
+      width: 1140px;
+   }
+}
+
+@media screen and (max-width: 1199px) {
+   .App {
+      width: 960px;
+   }
+}
+
+@media screen and (max-width: 991px) {
+   .App {
+      width: 720px;
+   }
+}
+
+@media screen and (max-width: 767px) {
+   .App {
+      width: 540px;
+   }
+}
+
+@media screen and (max-width: 575px) {
+   .App {
+      width: 100%;
+      padding: 0 15px;
+   }
+} */
