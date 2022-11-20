@@ -4,7 +4,7 @@ import { StyledFooter } from './StyledFooter'
 export const Footer = () => {
   return (
     <StyledFooter>
-      <div>Furnicraft info</div>
+      <div>Store info</div>
       <div>Footer</div>
     </StyledFooter>
   )
