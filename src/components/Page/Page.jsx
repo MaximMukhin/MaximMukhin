@@ -11,7 +11,7 @@ export const Page = (props) => {
     <StyledPage>
       <Header />
       <Navigation />
-      <div style={{ padding: '8px' }}>Page{children}</div>
+      <div style={{ padding: "8px" }}>{children}</div>
       <Footer />
     </StyledPage>
   );

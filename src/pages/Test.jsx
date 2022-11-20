@@ -1,41 +1,63 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios'
-import { Page } from '../components/Page';
-
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { Page } from "../components/Page";
 
 const Test = () => {
-  const [articles, setArticles] = useState([]);
-  //   const [content, setContent] = useState("");
+  const [article, setArticle] = useState([]);
+  const [editArticle, setEditArticle] = useState({});
+
+  let title = article[0]?.title;
+  let body = article[0]?.body;
+
+  console.log("article", article);
+  console.log("editArticle", editArticle);
+
+  console.log("title", title);
+  console.log("content", body);
 
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/posts?_limit=4&_page=1')
-      .then(res => setArticles(res.data))
-  }, [setArticles])
+    axios
+      .get("https://jsonplaceholder.typicode.com/posts?_limit=1&_page=1")
+      .then((res) => setArticle(res.data))
+      .catch((error) => console.error(error));
+  }, [setArticle]);
 
   const button = () => {
-    console.log('button', 'articles', articles)
-  }
+    console.log("button", "article", article);
+    const editArticle = {
+      title: title,
+      body: body,
+    };
+    setEditArticle(editArticle);
+    console.log("editArticle", editArticle);
+  };
 
-  const inputText = (text) => {
-    console.log('inputText', text);
-  }
-  const inputTextArea = (text) => {
-    console.log('inputTextArea', text);
-  }
+  const inputText = (event) => {
+    console.log("inputText", event.target.value);
+    title = event.target.value;
+    console.log("title", title);
+  };
+  const inputTextArea = (event) => {
+    console.log("inputTextArea", event.target.value);
+    body = event.target.value;
+    console.log("content", body);
+  };
 
   return (
     <Page>
       <div>
-      <div>Test</div>
+        <div>Test</div>
         <input
-          type='text'
-          placeholder='Title'
+          defaultValue={article[0]?.title}
+          type="text"
+          placeholder="Title"
           size={40}
           onInput={inputText}
         />
         <br />
         <textarea
-          placeholder='Content'
+          placeholder="Content"
+          defaultValue={article[0]?.body}
           cols={40}
           rows={6}
           onInput={inputTextArea}
@@ -44,15 +66,43 @@ const Test = () => {
         <button onClick={button}>Редактировать!</button>
         <br />
         <br />
-        <hr />
-        {articles.map(article => (
-          <div key={article.id}>{article.id}: {article.title}</div>
-        ))}
-        <hr />
-    </div>
+
+        <section>
+          <h3>Загруженная статья</h3>
+          <hr />
+          <div>
+            <p>
+              <span style={{ fontWeight: "900" }}>title:</span>
+              {article[0]?.title}
+            </p>
+            <br />
+            <p>
+              <span style={{ fontWeight: "900" }}>content:</span>
+              {article[0]?.body}
+            </p>
+          </div>
+        </section>
+
+        <br />
+
+        <section>
+          <h3>Отредактированая статья</h3>
+          <hr />
+          <div>
+            <p>
+              <span style={{ fontWeight: "900" }}>title:</span>
+              {editArticle?.title}
+            </p>
+            <br />
+            <p>
+              <span style={{ fontWeight: "900" }}>content:</span>
+              {editArticle?.body}
+            </p>
+          </div>
+        </section>
+      </div>
     </Page>
+  );
+};
 
-  )
-}
-
-export default Test
+export default Test;
