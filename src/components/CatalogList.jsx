@@ -18,8 +18,8 @@ const CatalogList = ({ productProps, title }) => {
       return el.color.toLowerCase().includes(sertchColors.toLowerCase())
    })
 
-   console.log('products', products);
-   console.log('filterColor', filterColor);
+   // console.log('products', products);
+   // console.log('filterColor', filterColor);
 
    return (
       <div>
