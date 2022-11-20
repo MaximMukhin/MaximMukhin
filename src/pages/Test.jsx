@@ -9,11 +9,11 @@ const Test = () => {
   let title = article[0]?.title;
   let body = article[0]?.body;
 
-  console.log("article", article);
-  console.log("editArticle", editArticle);
+  console.log("article:", article);
+  console.log("editArticle:", editArticle);
 
-  console.log("title", title);
-  console.log("content", body);
+  console.log("title:", title);
+  console.log("content:", body);
 
   useEffect(() => {
     axios
@@ -23,24 +23,24 @@ const Test = () => {
   }, [setArticle]);
 
   const button = () => {
-    console.log("button", "article", article);
+    console.log("button", "article:", article);
     const editArticle = {
       title: title,
       body: body,
     };
     setEditArticle(editArticle);
-    console.log("editArticle", editArticle);
+    console.log("editArticle:", editArticle);
   };
 
   const inputText = (event) => {
     console.log("inputText", event.target.value);
     title = event.target.value;
-    console.log("title", title);
+    console.log("title:", title);
   };
   const inputTextArea = (event) => {
     console.log("inputTextArea", event.target.value);
     body = event.target.value;
-    console.log("content", body);
+    console.log("content:", body);
   };
 
   return (
