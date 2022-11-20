@@ -1,7 +1,11 @@
 import React from 'react'
+import { StyledFooter } from './StyledFooter'
 
 export const Footer = () => {
   return (
-    <div style={{ textAlign: 'center' }}>Footer</div>
+    <StyledFooter>
+      <div>Furnicraft info</div>
+      <div>Footer</div>
+    </StyledFooter>
   )
 }
