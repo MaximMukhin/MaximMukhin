@@ -1,16 +1,15 @@
 import React from 'react'
-import Navigation from '../components/Navigation';
 import Counter from "../components/miniPrograms/Counter";
 import InputText from "../components/miniPrograms/InputText";
 import InputTextAreaAc from '../components/miniPrograms/InputTextAreaAc';
 import SpeedCut from '../components/miniPrograms/SpeedCut';
 import InputTextAreaIberis from '../components/miniPrograms/InputTextAreaIberis';
+import { Page } from '../components/Page';
 
 
 const MiniProgramms = () => {
    return (
-      <div>
-         <Navigation />
+      <Page>
          <h1 style={{
             textAlign: 'center',
             fontSize: '20px',
@@ -43,7 +42,7 @@ const MiniProgramms = () => {
 
 
          <hr style={{ margin: '15px 0' }} />
-      </div>
+      </Page>
    );
 };
 

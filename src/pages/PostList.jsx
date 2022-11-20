@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useRecoilState } from 'recoil'
 import { todosState } from '../atoms/todos'
-import Navigation from '../components/Navigation'
 import PostItem from '../components/postItem/PostItem'
 import { StyledPost } from '../components/styled/postList/StyledPost'
 import { copyDeep } from '../utils/copyDeep'
 import { Button, TextField } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
+import { Page } from '../components/Page'
 
 const PostList = () => {
 
@@ -53,8 +53,7 @@ const PostList = () => {
    }
 
    return (
-      <div>
-         <Navigation />
+      <Page>
          <h3 style={{ textAlign: 'center' }}>Post - Component</h3>
 
          <div style={{
@@ -124,7 +123,7 @@ const PostList = () => {
          }
 
 
-      </div>
+      </Page>
    )
 }
 

@@ -1,10 +1,9 @@
 import React from 'react'
-import Navigation from '../components/Navigation'
+import { Page } from '../components/Page'
 
 const Main = () => {
    return (
-      <div>
-         <Navigation />
+      <Page>
          <h3 style={{
             textAlign: 'center',
             fontWeight: '900'
@@ -12,7 +11,7 @@ const Main = () => {
          >
             Главная страница
          </h3>
-      </div>
+      </Page>
 
    )
 }

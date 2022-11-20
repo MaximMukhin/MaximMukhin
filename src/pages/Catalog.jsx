@@ -3,7 +3,7 @@ import { useRecoilState } from "recoil";
 import { productsState } from "../atoms/products";
 import '../styles/App.css'
 import CatalogList from "../components/CatalogList";
-import Navigation from "../components/Navigation";
+import { Page } from "../components/Page";
 //import { copyDeep } from "../utils/copyDeep";
 
 function Catalog() {
@@ -20,16 +20,13 @@ function Catalog() {
    //  }, [setProducts])
 
    return (
-      <div>
-         <Navigation />
-
-
+      <Page>
          <CatalogList
             title={'Catalog'}
             productProps={products}
          />
          <hr style={{ margin: '15px 0' }} />
-      </div>
+      </Page>
    )
 }
 

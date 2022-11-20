@@ -4,9 +4,9 @@ import { cartState } from '../atoms/cart';
 import { productsState } from '../atoms/products';
 import { copyDeep } from '../utils/copyDeep';
 import CartItem from '../components/CartItem';
-import Navigation from '../components/Navigation';
 import { StyledProductList } from '../components/styled/StyledProductList';
 import { rubFormat } from '../utils/rubFormat';
+import { Page } from '../components/Page';
 
 const Cart = () => {
 
@@ -77,9 +77,7 @@ const Cart = () => {
    }, 0)
 
    return (
-      <div>
-         <Navigation />
-
+      <Page>
          {cart.length !== 0
             ? <div>
                <h3 style={{ textAlign: 'center' }}>Cart</h3>
@@ -116,7 +114,7 @@ const Cart = () => {
                Корзина пустая
             </div>
          }
-      </div>
+      </Page>
    )
 }
 
